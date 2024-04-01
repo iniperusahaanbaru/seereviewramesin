@@ -37,8 +37,8 @@ credentials = service_account.Credentials.from_service_account_info(credentials_
 
 firestore_db = firestore.Client(project=credentials_dict['project_id'], credentials=credentials)
 
-@st.cache_data
-def fetch_reviews(limit=10):  # Example limit added
+
+def fetch_reviews(limit=100):  # Example limit added
     reviews_query = firestore_db.collection(FIRESTORE_COLLECTION) \
         .where("restoran_name", "==", "Restoran Ramesin") \
         .order_by("timestamp", direction=firestore.Query.DESCENDING) \
