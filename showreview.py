@@ -57,7 +57,7 @@ def display_review(review):
         st.write(f"Date: {review['timestamp'].strftime('%Y-%m-%d')}")
 
 def main():
-    col1, col2, col3 = st.columns([1,1,1])
+    col1, col2, col3 = st.columns([1,2,1])
 
     with col2:
         st.title('Review Book RAMESINDONG')
