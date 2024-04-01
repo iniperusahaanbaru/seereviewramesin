@@ -34,7 +34,7 @@ credentials_dict = {
 credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
 # Initialize Google Cloud clients with the credentials
-storage_client = storage.Client(credentials=credentials)
+
 firestore_db = firestore.Client(project=credentials_dict['project_id'], credentials=credentials)
 
 @st.cache_data
