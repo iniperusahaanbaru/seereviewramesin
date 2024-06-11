@@ -40,7 +40,7 @@ firestore_db = firestore.Client(project=credentials_dict['project_id'], credenti
 
 def fetch_reviews(limit=100):  # Example limit added
     reviews_query = firestore_db.collection(FIRESTORE_COLLECTION) \
-        .where("restoran_name", "==", "Restoran Tes") \
+        .where("restoran_name", "==", "Restoran Tes1") \
         .order_by("timestamp", direction=firestore.Query.DESCENDING) \
         .limit(limit)  # Limit the results
         
