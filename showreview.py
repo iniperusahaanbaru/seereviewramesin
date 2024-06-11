@@ -65,7 +65,7 @@ def main():
     reviews = fetch_reviews()
 
     if not reviews:
-        st.warning("No reviews found for Restoran ABC.")
+        st.warning("No reviews found for Restoran 123.")
         st.image("placeholder.jpg", use_column_width=True)
     else:
         cols = st.columns(5)
